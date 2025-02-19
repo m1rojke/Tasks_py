@@ -7,3 +7,5 @@ first_name = input('Введите ваше имя: ')
 age = int(input('Введите ваш возраст: '))
 
 print(f'Привет, {first_name}! Тебе {age} лет.')
+
+# 1233
