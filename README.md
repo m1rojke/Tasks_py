@@ -16,5 +16,3 @@
 3. Пример вывода:
 
    ![alt text](image.png)
-
-python3 tasks/название_файла.py
