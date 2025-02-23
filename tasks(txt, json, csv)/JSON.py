@@ -4,17 +4,22 @@
 
 import json
 
-data = {"name": "Алекс",
-        "age": 25,
-        "city": "Moscow",
-        }
+# Данные с пользователями
+users = [
+    {"name": "Алекс", "age": 25},
+    {"name": "Мария", "age": 30},
+    {"name": "Иван", "age": 22}
+]
 
-# Запись в JSON
-with open("data.json", "w", encoding="utf-8") as file:
-    json.dump(data, file, indent=4)
+# Запись в JSON-файл
+with open("users.json", "w", encoding="utf-8") as file:
+    json.dump(users, file, indent=4, ensure_ascii=False)
 
-# Чтение JSON
-with open("data.json", "r", encoding="utf-8") as file:
-    loaded_data = json.load(file)
+# Чтение из JSON-файла
+with open("users.json", "r", encoding="utf-8") as file:
+    loaded_users = json.load(file)
 
-print("Прочитанные данные:", loaded_data)
+# Вывод возраста каждого пользователя
+print("Возраст пользователей:")
+for user in loaded_users:
+    print(f"{user['name']}: {user['age']} лет")
