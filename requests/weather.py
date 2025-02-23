@@ -1,7 +1,7 @@
 import requests
 
 city = input('Введите город: ')
-url = f'https://wttr.in/{city}?format=%C+%t'
+url = f"https://wttr.in/{city}?format=%l:+%C+%t+%h+%w"
 
 response = requests.get(url)
 
